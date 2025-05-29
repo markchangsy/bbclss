@@ -1,0 +1,21 @@
+{
+	"datapath": "features",                         
+	"trainlist": "features/filenames/train.txt",
+	"vallist": "features/filenames/validation.txt",
+	"evallist": "features/filenames/evaluation.txt",
+	"checkpoint_dir": "exp/ResNet34_babycrying",
+    "summaries_dir": "exp/ResNet34_babycrying",
+
+	"dataset_name": "BabyCrying",
+	"model": "resnet34",
+	"pretrained": true,
+
+	"scheduler": true,
+	"dataaug": false,
+	"batch_size": 128,
+	"num_workers": 20,
+	"epochs": 100,
+	"lr": 1e-4,
+    "weight_decay": 1e-3,
+    "num_folds": 10
+}

@@ -1,0 +1,10 @@
+*.whl
+*.tar
+*.pth
+*.onnx
+*.txt
+*.pyc
+exp/*
+runs/*
+scores/*
+*__pycache__
