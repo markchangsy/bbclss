@@ -37,7 +37,7 @@ def evaluate(model, model_dir, device, test_loader):
 
                 f.write('{} {} {}\n'.format(list(predicted)[0], list(target)[0], float(score)))
             acc = 100*correct/total
-            f.write('Accuracy:{}%'.format(acc))
+            # f.write('Accuracy:{}%'.format(acc))
     return acc
 
 def main(params):

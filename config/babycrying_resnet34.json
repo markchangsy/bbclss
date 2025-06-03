@@ -1,8 +1,8 @@
 {
-	"datapath": "features",                         
-	"trainlist": "features/filenames/train.txt",
-	"vallist": "features/filenames/validation.txt",
-	"evallist": "features/filenames/evaluation.txt",
+	"datapath": "/data/feat_data",                         
+	"trainlist": "/data/feat_data/filenames/train.txt",
+	"vallist": "/data/feat_data/filenames/validation.txt",
+	"evallist": "/data/feat_data/filenames/evaluation.txt",
 	"checkpoint_dir": "exp/ResNet34_babycrying",
     "summaries_dir": "exp/ResNet34_babycrying",
 

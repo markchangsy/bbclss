@@ -15,6 +15,7 @@ import pandas as pd
 import numpy as np
 import torchaudio
 from pathlib import Path
+from tqdm.auto import tqdm
 
 def extract_spectrogram(audio, sr, window_size, hop_size, n_fft, n_mels):
     """Convert a waveform array to a fixed‑length mel‑spectrogram.
@@ -122,8 +123,13 @@ def write_filename(df, mode, save_path):
 def main(args):
     os.makedirs(args.save_dir, exist_ok=True)
     df = pd.read_csv(args.csv_file, skipinitialspace=True)
-
-    for index, data in df.iterrows():
+    print("Extracting features:")
+    
+    for idx, data in tqdm(df.iterrows(),
+                     total=len(df),
+                     desc="Processing",
+                     leave=False):
+        
         filename = data["slice_file_name"]
         audio_path = os.path.join(args.data_dir, filename)
 
@@ -152,5 +158,5 @@ if __name__ == "__main__":
     parser.add_argument("--n_fft", default=1024, type=int, help="FFT size.")
     parser.add_argument("--n_mels", default=128, type=int, help="Number of mel filter‑bank channels.")
     parser.add_argument("--seed", default=42, type=int, help="RNG seed for shuffling the dataset.")
-
+    args = parser.parse_args()
     main(args)

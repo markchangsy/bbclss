@@ -8,3 +8,5 @@ exp/*
 runs/*
 scores/*
 *__pycache__
+wav-reverberate
+filenames/augmentation_metadata.csv
