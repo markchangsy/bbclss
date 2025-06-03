@@ -1,5 +1,5 @@
 # Audio Classification Training Pipeline
-
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/markchangsy/bbclss)
 ## Overview
 
 This repository provides an end‑to‑end **PyTorch** pipeline for **supervised sound‑event classification**. It consists of three standalone scripts that cover feature extraction, model training, and final evaluation. Although it was originally built for a baby‑cry detection task, the code is generic—changing a few paths in a JSON config lets you reuse it on any multi‑class audio dataset stored as WAV files.
